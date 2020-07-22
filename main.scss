@@ -1,0 +1,55 @@
+body {
+  background-color: azure;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  width: 70vw;
+  margin: 10rem auto;
+  margin-top: 105vh;
+  margin-bottom: 105vh;
+  list-style: none;
+
+  @for $i from 1 through 5 {
+    & > :nth-child(#{$i}) {
+      top: ($i * 15vh);
+      margin-bottom: 100vh - $i * 15vh;
+    }
+  }
+
+  & > li {
+    height: 2rem;
+    width: 100%;
+    position: sticky;
+    background-color: lightsteelblue;
+    margin-bottom: 105vh;
+  }
+}
+
+#counter {
+  position: fixed;
+  bottom: 4vh;
+  left: 3.5vw;
+  background-color: rgb(65, 78, 128);
+  color: azure;
+  height: 3.2rem;
+  width: auto;
+  box-shadow: 4px 4px 0px 0px rgb(139, 146, 175);
+  padding: 1rem 1.5rem;
+  padding-top: 0.7rem;
+  text-align: center;
+  font-size: 2.5rem;
+  line-height: 1;
+  font-family: sans-serif;
+
+  display: flex;
+  flex-direction: column;
+
+  &::after {
+    content: 'div counter';
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+    line-height: 0.5;
+  }
+}
