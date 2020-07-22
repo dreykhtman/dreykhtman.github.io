@@ -14,10 +14,11 @@ const intersectionOptions = {
 
 const intersectionCallback = (entries, observer) => {
   entries.forEach((entry) => {
+    // (entry.boundingClientRect.y < 0) so everything happens only if the rectangle is above the window
     if (entry.intersectionRatio <= 1 && entry.boundingClientRect.y < 0) {
       newList = list[list.length - 1].cloneNode(true);
 
-      // disconnect observer, so elements aren't added when scrolling up
+      // disconnect observer so elements aren't added when scrolling up
       intersectionObserver.disconnect();
 
       container.appendChild(newList);
