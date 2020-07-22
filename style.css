@@ -4,9 +4,11 @@ body {
 .list {
   display: flex;
   flex-direction: column;
+  align-content: center;
   width: 70vw;
   margin: 105vh auto;
-  list-style: none; }
+  list-style: none;
+  padding: 0; }
   .list > :nth-child(1) {
     top: 15vh;
     margin-bottom: 85vh; }
@@ -24,12 +26,13 @@ body {
     margin-bottom: 25vh; }
   .list > li {
     height: 2rem;
-    width: 100%;
     position: sticky;
     background-color: lightsteelblue;
+    width: 100%;
     margin-bottom: 105vh; }
 
 #counter {
+  z-index: 2;
   display: flex;
   flex-direction: column;
   position: fixed;
