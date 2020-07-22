@@ -1,7 +1,9 @@
-const parent = document.getElementById('parent');
+const container = document.getElementById('container');
 const list = document.getElementsByClassName('list');
 let newList;
 
+//
+//
 // Intersection Observer
 
 const intersectionOptions = {
@@ -18,7 +20,7 @@ const intersectionCallback = (entries, observer) => {
       // disconnect observer, so elements aren't added when scrolling up
       intersectionObserver.disconnect();
 
-      parent.appendChild(newList);
+      container.appendChild(newList);
       intersectionObserver.observe(list[list.length - 1]);
     }
   });
@@ -31,6 +33,8 @@ const intersectionObserver = new IntersectionObserver(
 
 intersectionObserver.observe(list[list.length - 1]);
 
+//
+//
 // Mutation Observer
 
 const mutationOptions = {
@@ -48,4 +52,4 @@ const mutationCallback = (mutationsList, observer) => {
 };
 
 const mutationObserver = new MutationObserver(mutationCallback);
-mutationObserver.observe(parent, mutationOptions);
+mutationObserver.observe(container, mutationOptions);

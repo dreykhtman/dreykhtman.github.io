@@ -5,10 +5,9 @@ body {
 .list {
   display: flex;
   flex-direction: column;
+
   width: 70vw;
-  margin: 10rem auto;
-  margin-top: 105vh;
-  margin-bottom: 105vh;
+  margin: 105vh auto;
   list-style: none;
 
   @for $i from 1 through 5 {
@@ -28,6 +27,9 @@ body {
 }
 
 #counter {
+  display: flex;
+  flex-direction: column;
+
   position: fixed;
   bottom: 4vh;
   left: 3.5vw;
@@ -42,9 +44,6 @@ body {
   font-size: 2.5rem;
   line-height: 1;
   font-family: sans-serif;
-
-  display: flex;
-  flex-direction: column;
 
   &::after {
     content: 'div counter';

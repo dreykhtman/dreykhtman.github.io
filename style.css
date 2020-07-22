@@ -5,9 +5,7 @@ body {
   display: flex;
   flex-direction: column;
   width: 70vw;
-  margin: 10rem auto;
-  margin-top: 105vh;
-  margin-bottom: 105vh;
+  margin: 105vh auto;
   list-style: none; }
   .list > :nth-child(1) {
     top: 15vh;
@@ -32,6 +30,8 @@ body {
     margin-bottom: 105vh; }
 
 #counter {
+  display: flex;
+  flex-direction: column;
   position: fixed;
   bottom: 4vh;
   left: 3.5vw;
@@ -45,9 +45,7 @@ body {
   text-align: center;
   font-size: 2.5rem;
   line-height: 1;
-  font-family: sans-serif;
-  display: flex;
-  flex-direction: column; }
+  font-family: sans-serif; }
   #counter::after {
     content: 'div counter';
     font-size: 0.8rem;
