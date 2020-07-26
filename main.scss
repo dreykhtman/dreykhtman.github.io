@@ -2,7 +2,13 @@ body {
   background-color: azure;
 }
 
+.container {
+  overflow: hidden;
+}
+
 .list {
+  position: relative;
+  // border: 1px solid salmon;
   display: flex;
   flex-direction: column;
   align-content: center;
@@ -20,6 +26,8 @@ body {
   }
 
   & > li {
+    transition: transform 0.5s cubic-bezier(0.9, 0.07, 0.15, 0.95);
+
     height: 2rem;
     position: sticky;
     background-color: lightsteelblue;
@@ -54,4 +62,20 @@ body {
     margin-top: 0.5rem;
     line-height: 0.5;
   }
+}
+
+.slide-left {
+  transform: translateX(-150%);
+}
+
+.slide-right {
+  transform: translateX(150%);
+}
+
+.slide-from-left {
+  transform: translateX(0);
+}
+
+.slide-from-right {
+  transform: translateX(0);
 }
